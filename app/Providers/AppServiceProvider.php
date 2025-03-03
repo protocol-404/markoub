@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Blade;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,8 +20,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
-
-        // Register app-layout component
-        Blade::component('components.app-layout', 'app-layout');
+        // The app-layout component registration is removed as we're now using @extends
     }
 }
